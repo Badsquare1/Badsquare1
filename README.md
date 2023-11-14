@@ -30,18 +30,23 @@ def pergunta1(Pergunta_1):
     if Pergunta_1 == 1:
         Array.append('Essa parte é muito usada para pipipi popopo')
         Array_cont =+ 1
-        print(Array)
+        return(Array_cont)
     elif Pergunta_1 == 2:
         Pilha.append('se a parte tal ser feita de tal jeito, está certo')
         Pilha_cont =+ 1
-        print(Pilha)
+        return(Pilha_cont)
     elif Pergunta_1 == 3:
         pass       
     else:
         Pergunta_1 = int(input("Insira um valor válido.\n"))
-        pergunta1(Pergunta_1)
-     
-pergunta1(Pergunta_1)
+    pergunta1(Pergunta_1)
+        
+if Pergunta_1 == 1:
+    Array_cont = Array_cont + pergunta1(Pergunta_1)
+elif Pergunta_1 == 2:
+    Pilha_cont = Pilha_cont + pergunta1(Pergunta_1)
+    
+
 '''Pergunta_1 = int(input("Se x for essencial pra você, digite 1. Se não for, digite 2. Caso seja irrelevante, digite 3.\n"))
 if Pergunta_1 == 1:
      Array.append('Essa parte é muito usada para pipipi popopo')
