@@ -4,6 +4,8 @@
 
 -----> Utilizamos alguns Arrays simples para implementar esse projeto. 
 
+from tkinter import *
+
 Array = list()
 Pilha = list()
 Fila = list()
@@ -43,7 +45,7 @@ Pergunta_2 = int(input('\n\033[1;31mOs dados inseridos teram relação entre si?
 condic_2 = 0
 perguntas(Pergunta_2, condic_2)
 if Pergunta_2 == 1:
-    Grafos_cont += 1
+    Grafo_cont += 1
     Arvore_cont += 1
 
 Pergunta_3 = int(input('\n\033[1;31mHaverá ligação direta e recíproca entre 2 ou mais elementos (formação de rede)?\n\033[m\n'))
@@ -74,7 +76,7 @@ if Pergunta_6 == 1:
     Pilha_cont += 1
     Fila_cont += 1
 elif Pergunta_6 == 2:
-    Grafos_cont += 1
+    Grafo_cont += 1
     Arvore_cont += 1
 
 Pergunta_7 = int(input('\n\033[1;31mDeseja que o acesso aos elementos seja em tempo constante?\n\033[m\n'))
@@ -99,7 +101,7 @@ if Pergunta_9 == 1:
 
 
 
-print(Array_frase)
+
 
 dic = {'Array': Array_cont, 'Pilha':Pilha_cont, 'Fila': Fila_cont, 'Arvore':Arvore_cont, 'Grafo':Grafo_cont}
 total = max(dic, key = dic.get)
@@ -156,7 +158,7 @@ def implemente_pilha():
         class Pilha:  
 
 \n\033[1;31m#Crie a função init para inicializar a pilha como uma lista vazia\033[m
-    def __init__(self):  
+    def init(self):  
         self.itens = []
 
 \n\033[1;31m#Crie uma função para verificar se a pilha está vazia\033[m
@@ -267,4 +269,3 @@ elif total == 'Arvore':
 elif total == 'Grafo':
     print('Resultado: o grafo é a estrutura de dados ideal para o seu projeto! Em sua essência, um grafo consiste em nós (vértices) conectados por arestas, representando relações entre elementos.\nEssa estrutura pode ser construída utilizando estruturas de dados nativas, como dicionários para representar os nós e suas conexões. As arestas podem ser armazenadas como pares de nós em listas ou tuplas.\nEssa abordagem mais básica oferece flexibilidade na criação e manipulação de grafos, permitindo a implementação de algoritmos personalizados para percorrer, analisar e extrair informações de grafos, adaptando-se às necessidades específicas do problema em questão.')
     print('Chegamos ao final do seu questionário, para conhecer mais sobre a implementação dessa estrutura acesse o: https://github.com/GeovanaRamos/ed-cic-2023-2')
-    
